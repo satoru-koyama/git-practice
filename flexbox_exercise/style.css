@@ -25,19 +25,16 @@ header > :first-child {
 
 main {
   width: 100%;
-  background-color: grey;
   display: flex;
   justify-content: center;
 }
 
-main > div {
-  width: 1000px;
+main > div:nth-child(1) {
+  width: 300px;
   background-color: lightgreen;
-  display: flex;
-  justify-content: flex-end;
 }
 
-main > div > div {
+main > div:nth-child(2) {
   max-width: 700px;
   padding: 20px;
   background-color: green;
@@ -46,7 +43,7 @@ main > div > div {
   flex-grow: 1;
 }
 
-main > div > div > div {
+main > div:nth-child(2) > div {
   height: 130px;
   margin: 10px;
   background-color: yellow;
@@ -59,28 +56,10 @@ footer {
   background-color: skyblue;
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  flex-wrap: wrap;
 }
 
-footer > div:nth-child(1) {
-  display: flex;
-  justify-content: space-between;
-}
-
-footer > div:nth-child(1) > div {
-  height: 40px;
-  flex-basis: 45%;
-  max-width: 600px;
-  background-color: lightblue;
-  margin: 10px;
-}
-
-footer > div:nth-child(2) {
-  display: flex;
-  justify-content: center;
-}
-
-footer > div:nth-child(2) > div {
+footer > div {
   height: 40px;
   flex-basis: 45%;
   max-width: 600px;
